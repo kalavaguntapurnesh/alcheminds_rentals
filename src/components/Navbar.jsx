@@ -141,7 +141,7 @@ const NavBar = () => {
         >
           <a href="/">
             <h1 className="w-full text-2xl text-mainColor font-bold m-4 cursor-pointer">
-              LM <span className="text-black">Club.</span>
+              AL <span className="text-black">Rentals.</span>
             </h1>
           </a>
           <ul className="p-4">
@@ -326,7 +326,7 @@ const NavBar = () => {
                 )}
               </AnimatePresence>
             </li>
-            <li className="p-4 border-b border-gray-600">
+            {/* <li className="p-4 border-b border-gray-600">
               <div
                 onClick={() => toggleMobileDropdown("contact")}
                 className="flex items-center justify-between cursor-pointer"
@@ -361,6 +361,14 @@ const NavBar = () => {
                   </motion.ul>
                 )}
               </AnimatePresence>
+            </li> */}
+            <li className="p-4 border-b border-gray-600">
+              <a
+                href="/pricing"
+                className="flex items-center justify-between cursor-pointer"
+              >
+                Pricing
+              </a>
             </li>
             <li className="p-4 border-b border-gray-600">
               <a
