@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
+import Accordion from "../components/Accordion";
 
 const Pricing = () => {
   const location = useLocation();
@@ -13,67 +14,64 @@ const Pricing = () => {
 
   const monthlyPlans = [
     {
-      name: "Free",
+      name: "Bronze",
       description: "Best option for personal use & for your next project.",
-      price: 0,
-      points: [
-        "Syndicated Listings",
-        "Background Screening",
-        "State-Specific Leases",
-        "Online Rent Collection",
-        "Maintenance Tracking",
-        "Property Accounting",
-      ],
-    },
-    {
-      name: "Unlimited",
-      description:
-        "Includes everything in Unlimited, plus these premium features:",
-      price: 9,
-      points: [
-        "FastPay Rent Payments",
-        " Waived ACH Fees",
-        "Customizable Applications",
-        "Customizable Leases",
-        " Clone and Reuse Lease Agreements",
-        " 2x Faster Response Time from us",
-      ],
-    },
-    {
-      name: "Premium",
-      description:
-        "Includes everything in Premium, plus these premium features:",
-      price: 15,
+      price: 10,
       points: [
         "Individual configuration",
         "No setup, or hidden fees",
         "Team size: 1 developer",
         "Premium support: 6 months",
         "Free updates: 6 months",
-        "Included all these features",
       ],
     },
-    // {
-    //   name: "Platinum",
-    //   description: "Best option for personal use & for your next project.",
-    //   price: 40,
-    //   points: [
-    //     "Individual configuration",
-    //     "No setup, or hidden fees",
-    //     "Team size: 1 developer",
-    //     "Premium support: 6 months",
-    //     "Free updates: 6 months",
-    //   ],
-    // },
+    {
+      name: "Silver",
+      description: "Best option for personal use & for your next project.",
+      price: 20,
+      points: [
+        "Individual configuration",
+        "No setup, or hidden fees",
+        "Team size: 1 developer",
+        "Premium support: 6 months",
+        "Free updates: 6 months",
+      ],
+    },
+    {
+      name: "Gold",
+      description: "Best option for personal use & for your next project.",
+      price: 35,
+      points: [
+        "Individual configuration",
+        "No setup, or hidden fees",
+        "Team size: 1 developer",
+        "Premium support: 6 months",
+        "Free updates: 6 months",
+      ],
+    },
+    {
+      name: "Platinum",
+      description: "Best option for personal use & for your next project.",
+      price: 40,
+      points: [
+        "Individual configuration",
+        "No setup, or hidden fees",
+        "Team size: 1 developer",
+        "Premium support: 6 months",
+        "Free updates: 6 months",
+      ],
+    },
   ];
 
   const getButtonColor = (planName) => {
     switch (planName) {
-      case "Free":
+      case "Bronze":
         return "text-[#CD7F32]";
-      case "Unlimited":
+      case "Silver":
         return "text-gray-600";
-      case "Premium":
+      case "Gold":
+        return "text-[#FFD700]";
+      case "Platinum":
         return "text-[#E5E4E2]";
       default:
         return "text-red-500";
@@ -91,6 +89,7 @@ const Pricing = () => {
   return (
     <div>
       <Navbar />
+
       <div className="mt-28">
         <div className="relative">
           <div className="w-full">
@@ -122,7 +121,7 @@ const Pricing = () => {
                   {/* Toggle Button */}
                   <div
                     className={`relative w-16 h-8 bg-gray-300 rounded-full p-1 cursor-pointer flex items-center ${
-                      isYearly ? "bg-indigo-500" : "bg-gray-300"
+                      isYearly ? "bg-green-500" : "bg-gray-300"
                     }`}
                     onClick={handleToggle}
                   >
@@ -147,7 +146,7 @@ const Pricing = () => {
 
               <section className="bg-white ">
                 <div className="py-8 px-4 lg:px-6">
-                  <div className=" grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+                  <div className=" grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
                     {monthlyPlans.map((plan) => (
                       <div
                         id="pricing_bronze"
@@ -205,7 +204,7 @@ const Pricing = () => {
                 </div>
               </section>
 
-              {/* <div className="pt-12 pb-12" id="faq">
+              <div className="pt-12 pb-12" id="faq">
                 <div className="space-y-2">
                   <div className="md:text-4xl text-3xl font-bold text-headingColor text-center">
                     <h1>Frequently Asked Questions</h1>
@@ -230,15 +229,11 @@ const Pricing = () => {
                     answer="You can contact us through mail on support@lmclub.com or go to the Contact page for further information. And we are always ready to help."
                   />
                 </div>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* <Testimonial />
-
-      <Footer /> */}
     </div>
   );
 };

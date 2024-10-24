@@ -96,10 +96,13 @@ const NavBar = () => {
 
         {/* Desktop Nav Links */}
         <ul className="hidden lg:flex flex-grow justify-center space-x-8 items-center">
-          <a href="/pricing" className="text-gray-700">
-            <li>Pricing</li>
-          </a>
           <Tabs />
+          <a
+            href="/pricing"
+            className="text-gray-700 hover:text-neutral-100 hover:bg-mainColor hover:rounded-full hover:px-4 hover:py-1.5 ease-in-out duration-500"
+          >
+            Pricing
+          </a>
         </ul>
 
         {/* Login Button */}
@@ -426,7 +429,7 @@ const Tabs = () => {
   return (
     <div
       onMouseLeave={() => handleSetSelected(null)}
-      className="relative flex h-fit gap-2"
+      className="relative flex h-fit gap-2 "
     >
       {TABS.map((t) => {
         return (
@@ -719,98 +722,6 @@ const Homebar = () => {
         <MdAccountBalanceWallet className="mb-2 text-xl text-mainColor" />
         <span className="text-xs font-semibold text-gray-700">
           Property Accounting
-        </span>
-      </a>
-    </div>
-  );
-};
-
-// const Subscription = () => {
-//   return (
-//     <div>
-//       <div className="grid grid-cols-4 gap-2">
-//         <a href="#">
-//           <img
-//             className="mb-2 h-14 w-full rounded object-cover"
-//             src="https://lmclub.club/wp-content/uploads/2024/09/Picture2-300x300.png"
-//             alt="Placeholder image"
-//           />
-//           <h4 className="mb-0.5 text-sm font-medium text-black">LM Beehive</h4>
-//           <p className="text-xs text-neutral-400">
-//             Coupons, information and opportunities from local restaurants hotel,
-//             retailers.
-//           </p>
-//         </a>
-//         <a href="#">
-//           <img
-//             className="mb-2 h-14 w-full rounded object-cover"
-//             src="https://lmclub.club/wp-content/uploads/2024/09/Picture1-300x300.png"
-//             alt="Placeholder image"
-//           />
-//           <h4 className="mb-0.5 text-sm font-medium text-black">
-//             LM Broadcast
-//           </h4>
-//           <p className="text-xs text-neutral-400">
-//             Advertise local businesses on your social media and we will pay you
-//             a percentage of the revenue earned.
-//           </p>
-//         </a>
-//         <a href="/enroll-rewards">
-//           <img
-//             className="mb-2 h-14 w-full rounded object-cover"
-//             src="https://lmclub.club/wp-content/uploads/2024/09/Picture3-300x300.png"
-//             alt="Placeholder image"
-//           />
-//           <h4 className="mb-0.5 text-sm font-medium text-black">
-//             Enroll Rewards
-//           </h4>
-//           <p className="text-xs text-neutral-400">
-//             Activate GROW & ENROLL to earn rewards for helping our community to
-//             expand.
-//           </p>
-//         </a>
-//         <a href="https://ecommerce-green-theta.vercel.app/">
-//           <img
-//             className="mb-2 h-14 w-full rounded object-cover"
-//             src="https://cdn-icons-png.flaticon.com/512/3445/3445817.png"
-//             alt="Placeholder image"
-//           />
-//           <h4 className="mb-0.5 text-sm font-medium text-black">
-//             Ecommerce Platform
-//           </h4>
-//           <p className="text-xs text-neutral-400">
-//             Ecommerce platform is the place where you can find customized
-//             jerseys.
-//           </p>
-//         </a>
-//       </div>
-//       <button className="ml-auto mt-4 flex items-center font-semibold gap-1 text-sm text-mainColor">
-//         <span>View more</span>
-//         <FiArrowRight />
-//       </button>
-//     </div>
-//   );
-// };
-
-const Privacy = () => {
-  return (
-    <div className="grid grid-cols-2 gap-4">
-      <a
-        href="/privacy-policy"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <MdOutlinePrivacyTip className="mb-2 text-xl text-mainColor" />
-        <span className="text-xs font-semibold text-gray-700">
-          Privacy Policy
-        </span>
-      </a>
-      <a
-        href="/consumer-privacy"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <RiCustomerService2Fill className="mb-2 text-xl text-mainColor" />
-        <span className="text-xs font-semibold text-gray-700">
-          Consumer Policy
         </span>
       </a>
     </div>
