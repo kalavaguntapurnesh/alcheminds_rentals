@@ -18,6 +18,7 @@ const Login = () => {
               type="email"
               placeholder="Enter your email"
               className="w-full p-4 font-mono border border-gray-300 rounded-lg text-xl"
+              required
             />
           </div>
 
@@ -28,6 +29,7 @@ const Login = () => {
               type="password"
               placeholder="Enter your password"
               className="w-full p-4 font-mono border border-gray-300 rounded-lg text-xl"
+              required
             />
           </div>
 

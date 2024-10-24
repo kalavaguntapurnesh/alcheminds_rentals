@@ -55,6 +55,7 @@ const Register = () => {
                 type="text"
                 placeholder="Enter your full name"
                 className="w-full p-4 font-mono border border-gray-300 rounded-lg text-xl"
+                required
               />
             </div>
 
@@ -65,6 +66,7 @@ const Register = () => {
                 type="email"
                 placeholder="Enter your email"
                 className="w-full p-4 font-mono border border-gray-300 rounded-lg text-xl"
+                required
               />
             </div>
 
@@ -75,6 +77,7 @@ const Register = () => {
                 type="password"
                 placeholder="Enter your password"
                 className="w-full p-4 font-mono border border-gray-300 rounded-lg text-xl"
+                required
               />
             </div>
 
